@@ -1,72 +1,59 @@
-# Laravel React Typescript Boilerplate
 
-An opinionated boilerplate based on Laravel 8.*, React 16 and Typescript empowering you to get off the ground quickly without spending time on configuration. 
+## About Laravel React Typescript Boilerplate
 
-## Included:
-* Laravel 8.*
-* React 16
-* Hot Module Reloading (npm run dev)
-* Admin Middleware (See Below)
-* [Typescript](https://www.typescriptlang.org/)
-* [Webpack 4](https://webpack.js.org/concepts/)
-* [React Router 4](https://reacttraining.com/react-router/web/guides/philosophy)
-* [Axios](https://github.com/axios/axios)
-* [Lodash (lodash-es)](https://lodash.com/docs/4.17.10)
-* [PostCSS](https://github.com/postcss/postcss)
-* [PurgeCSS](https://github.com/FullHuman/purgecss)
-* [TailwindCSS](https://tailwindcss.com/docs/what-is-tailwind/)
-* [Tailwind Forms Plugin](https://tailwindcss-custom-forms.netlify.com/)
-* [Ant Design](https://ant.design/docs/react/introduce)
-* [FontAwesome 5](http://fontawesome.io/icons/)
-* [Emotion CSS-in-JS Library](https://emotion.sh/docs/introduction)
-* [Debugbar](https://github.com/barryvdh/laravel-debugbar)
-* [Webpack Bundle Analyzer](https://github.com/webpack-contrib/webpack-bundle-analyzer)
-* [Log Viewer - /log-viewer (Protected by admin middleware)](https://github.com/ARCANEDEV/LogViewer)
-* [Laravel Telescope](https://laravel.com/docs/5.8/telescope)
+ A web application for our team to store and manage data from selected categories.
 
-![](https://i.imgur.com/YdAk3NK.jpg)
+## Tech Stack
+- 💻 &nbsp;
+    ![PHP](https://img.shields.io/badge/-PHP-333333?style=flat&logo=phpB&logoColor=00599C)
+    ![Laravel](https://img.shields.io/badge/-Laravel-333333?style=flat&logo=laravel)
+	![HTML5](https://img.shields.io/badge/-HTML5-333333?style=flat&logo=HTML5)
+	![CSS](https://img.shields.io/badge/-CSS-333333?style=flat&logo=CSS3&logoColor=1572B6)
+	![JavaScript](https://img.shields.io/badge/-JavaScript-333333?style=flat&logo=javascript)
+	![Bootstrap](https://img.shields.io/badge/-Bootstrap-333333?style=flat&logo=bootstrap&logoColor=563D7C)
 
-## Documentation
+- 🛢 &nbsp;
+    ![MySQL](https://img.shields.io/badge/-MySQL-333333?style=flat&logo=mysql)
 
-#### Frontend Files
-Frontend JS & CSS files are placed in ``` /frontend ```.
+- ⚙️ &nbsp;
+    ![Git](https://img.shields.io/badge/-Git-333333?style=flat&logo=git)
 
-#### Hot Module Reloading and Development:
-First, allow insecure certs from localhost (for development).
-In Chrome, go to this url and Enable Insecure Certs from Localhost:
+- 🔧 &nbsp;
+    ![Visual Studio Code](https://img.shields.io/badge/-Visual%20Studio%20Code-333333?style=flat&logo=visual-studio-code&logoColor=007ACC)
+    ![Sublime Text 3](https://img.shields.io/badge/-Sublime%20Text%203-333333?style=flat&logo=sublime-code)
 
-``` chrome://flags/#allow-insecure-localhost ```
+## Getting Started
 
-Run HMR:
+Clone the project repository by running the command below if you use SSH
 
-``` npm run dev ```
-
-#### Production Development:
-``` npm run production ```
-
-To use production built files, set Laravel APP_ENV to production.
-#### Admin Middleware
-
-In config/auth.php add the emails of 'Admins' to the admins array.
-This allows you to easily restrict access to certain routes whereby the user's email is not in the admins array using the admin middleware.
-```
-Route::get('admin/profile', function () {
-    //
-})->middleware('admin');
+```bash
+git clone https://rajnish42413@bitbucket.org/newsbytesapp/data-dashboard.git
 ```
 
-The admin middleware file is located at:
+After cloning, run:
+
+```bash
+composer install
 ```
-App\Http\Middleware\Admin
+
+Duplicate `.env.example` and rename it `.env`
+
+Then run:
+
+```bash
+composer require --dev brackets/admin-generator
+# here, make sure .env variables are correctly configured
+php artisan craftable:install
+npm install && npm run dev
 ```
 
-## Contact
-[George's Twitter](https://twitter.com/grmcameron)
+And finally, start the application:
 
-## License
-#### MIT License:
-Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
+```bash
+php artisan serve
+```
 
-The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
+and visit [http://localhost:8000](http://localhost:8000) to see the application in action.
 
-THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+
+## [Rajnish Singh](https://github.com/rajnish42413)
